@@ -1,0 +1,49 @@
+:root {
+  --clr-primary-400: #4759f9;
+  --clr-accent-400: #feae37;
+
+  --clr-neutral-100: #ffffff;
+  --clr-neutral-400: #454c5d;
+  --clr-neutral-900: #1d1e25;
+
+  --clr-header-bb: #dcdfff;
+
+  --ff-primary: 'Urbanist', sans-serif;
+
+  --fs-300: 0.875rem;
+  --fs-400: 1rem;
+  --fs-500: 1.25rem;
+
+  --fs-h6: 1.5rem;
+  --fs-h5: 1.875rem;
+  --fs-h4: 2.25rem;
+  --fs-h3: 2.5rem;
+  --fs-h2: 3.5rem;
+  --fs-h1: 3.5rem;
+
+  /* @media (min-width: 60rem) {
+      --fs-h6: 1.5rem;
+      --fs-h5: 1.875rem;
+      --fs-h4: 2.25rem;
+      --fs-h3: 2.5rem;
+      --fs-h2: 3.5rem;
+      --fs-h1: 4rem;
+    } */
+}
+
+/* * {
+  outline: 1px solid red;
+} */
+
+body {
+  font-family: var(--ff-primary);
+  color: var(--clr-neutral-400);
+  font-size: var(--fs-400);
+}
+
+.container {
+  --_padding: 1.5rem;
+
+  width: min(1440px, 100% - (var(--_padding) * 2));
+  margin-inline: auto;
+}

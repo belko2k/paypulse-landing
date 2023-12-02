@@ -1,0 +1,39 @@
+---
+interface Props {
+  type?: string;
+  variant: 'primary' | 'secondary';
+}
+
+const { type = 'button', variant } = Astro.props;
+
+let background;
+
+switch (variant) {
+  case 'primary':
+    background = 'var(--clr-primary-400)';
+    break;
+  case 'secondary':
+    background = 'var(--clr-neutral-100)';
+    break;
+  default:
+    background = 'var(--clr-primary-400)';
+}
+---
+
+<a href="#" type={type}>
+  <slot />
+</a>
+
+<style
+  define:vars={{
+    background,
+  }}
+>
+  a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--background);
+    padding: 0.875rem 1.813rem;
+    border-radius: 0.25rem;
+  }
+</style>

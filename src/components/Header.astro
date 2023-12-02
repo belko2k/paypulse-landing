@@ -1,0 +1,67 @@
+---
+import NavLinks from './NavLinks.astro';
+import { Image } from 'astro:assets';
+import logoDark from '../../public/images/Logo-dark.svg';
+import Button from './Button.astro';
+---
+
+<header>
+  <div class="container">
+    <div>
+      <Image src={logoDark} alt="PayPulse logo" />
+    </div>
+    <nav>
+      <ul>
+        <NavLinks />
+      </ul>
+      <Button variant="primary">
+        <p>Download App</p>
+      </Button>
+    </nav>
+  </div>
+</header>
+
+<style>
+  header {
+    padding-block: 1.875rem;
+    position: relative;
+  }
+
+  header::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: var(--clr-header-bb);
+    bottom: 0;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(2rem, 3.5vw, 3rem);
+  }
+
+  ul {
+    display: flex;
+    gap: clamp(2rem, 5vw, 2.5rem);
+    list-style: none;
+  }
+
+  p {
+    color: var(--clr-neutral-100);
+    line-height: 24px;
+  }
+
+  @media (max-width: 700px) {
+    img {
+      width: 115px;
+    }
+  }
+</style>
