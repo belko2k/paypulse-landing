@@ -1,0 +1,98 @@
+---
+import { Image } from 'astro:assets';
+import appStore from '../../public/images/App-Store.png';
+import googlePlay from '../../public/images/Play-Store.png';
+import heroPhone from '../../public/images/hero-phone.png';
+import heroPhoneSm from '../../public/images/hero-phone-sm.png';
+---
+
+<section>
+  <div class="container | even-columns">
+    <div class="content">
+      <p><span>New</span> Download and enjoy!</p>
+      <div>
+        <h1>
+          The <span>Easiest</span> way to send money safely to anywhere
+        </h1>
+        <p>
+          Send your money to everywhere in the world in less than a minute!<br
+          />
+           Download the app now.
+        </p>
+      </div>
+      <div class="btn-wrapper">
+        <a href="#"><Image src={appStore} alt="Download on the App Store" /></a>
+        <a href="#"><Image src={googlePlay} alt="Get it on Google Play" /></a>
+      </div>
+    </div>
+    <picture>
+      <source srcset={heroPhone.src} media="(min-width: 600px)" />
+      <img src={heroPhoneSm.src} alt="App Home Page" />
+    </picture>
+  </div>
+</section>
+
+<style>
+  section {
+    padding-block: 56px 32px;
+    background: url('../../public/images/bg3.png');
+    background-repeat: no-repeat;
+    background-position: center 0;
+  }
+
+  .even-columns {
+    display: grid;
+    gap: 3.5rem;
+  }
+
+  .content {
+    display: grid;
+    gap: 2.5rem;
+  }
+
+  p span {
+    display: inline-block;
+    background-color: var(--clr-accent-400);
+    font-size: var(--fs-300);
+    color: var(--clr-neutral-100);
+    padding: 0.25rem 1rem;
+    border-radius: 0.625rem;
+    line-height: 22px;
+  }
+
+  section p:first-child {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--clr-neutral-400);
+    line-height: 24px;
+  }
+
+  h1 span {
+    color: var(--clr-primary-400);
+  }
+
+  h1 {
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-bold);
+    line-height: 65px;
+  }
+
+  section p:last-child {
+    font-size: var(--fs-500);
+    color: var(--clr-neutral-400);
+    font-weight: var(--fw-light);
+    line-height: 28px;
+    margin-top: 2.5rem;
+  }
+
+  .btn-wrapper {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  picture {
+    justify-self: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+</style>

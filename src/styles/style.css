@@ -21,6 +21,11 @@
   --fs-h2: 3.5rem;
   --fs-h1: 3.5rem;
 
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
   /* @media (min-width: 60rem) {
       --fs-h6: 1.5rem;
       --fs-h5: 1.875rem;
@@ -37,7 +42,6 @@
 
 body {
   font-family: var(--ff-primary);
-  color: var(--clr-neutral-400);
   font-size: var(--fs-400);
 }
 
